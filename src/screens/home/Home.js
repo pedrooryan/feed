@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
 import { Avatar, Card, IconButton } from 'react-native-paper'
-
 import Api from '../../services/Api'
 
 export default function Home(props) {
@@ -18,7 +17,7 @@ export default function Home(props) {
 
             })
             .catch(error => {
-                console.error("DEU ERRO AO BUSCAR USUARIOS", error)
+                console.error("erro na busca de usuários", error)
             })
 
     }, [])

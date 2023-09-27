@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
 import { Avatar, Card , Divider, Text} from 'react-native-paper'
-
 import Api from '../../services/Api'
 
 export default function Posts(props) {
@@ -16,7 +15,7 @@ export default function Posts(props) {
                 setPosts(response.data.posts)
             })
             .catch(error => {
-                console.error("DEU ERRO AO BUSCAR USUARIOS", error)
+                console.error("erro na busca de usuários", error)
             })
 
     }, [])
