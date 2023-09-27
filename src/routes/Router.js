@@ -1,29 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import {createStackNavigator} from '@react-navigation/stack'
-
+import { createStackNavigator } from '@react-navigation/stack'
+import React from 'react'
 import Home from '../screens/home/Home'
 import Posts from '../screens/posts/Posts'
 import Usuario from '../screens/usuario/Usuario'
 
+
 const Stack = createStackNavigator()
 
 export default function Router() {
-  return (
+    return (
 
-    <NavigationContainer>
-        <Stack.Navigator>
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName='Home'>
 
-            <Stack.Screen name= 'Home' component={Home}/>
-            <Stack.Screen name= 'Usuário' component={Usuario}/>
+                <Stack.Screen name='Home' component={Home} />
+                <Stack.Screen name='Usuário' component={Usuario} />
+                <Stack.Screen name='Posts' component={Posts} />
 
-        </Stack.Navigator>
-        
+            </Stack.Navigator>
+        </NavigationContainer>
 
-    </NavigationContainer>
-
-  )
+    )
 }
-
-const styles = StyleSheet.create({})
